@@ -1,6 +1,17 @@
+import useRunOnce from "../components/useRunOnce";
 import "./formstyles.css";
 
-export default function SectionA({ handleChange }) {
+export default function SectionA({ state, handleChange }) {
+  useRunOnce({
+    fn: () => {
+      const inputElements = document.querySelectorAll("input");
+      inputElements.forEach((input) => {
+        if (state[input.name] == undefined) return;
+        input.value = state[input.name];
+      });
+    },
+  });
+
   return (
     <form>
       <table border="2px solid black">
@@ -10,9 +21,8 @@ export default function SectionA({ handleChange }) {
             <label htmlFor="policy-no">Policy No.</label>
           </td>
           <td>
-            <input 
+            <input
               onChange={(e) => handleChange(e, e.currentTarget.name)}
-              onBlur={() => handleBlur()}
               type="number"
               name="policy-no"
               id="policy-no"

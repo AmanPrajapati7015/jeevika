@@ -1,17 +1,26 @@
 import "./formstyles.css";
+import useRunOnce from "../components/useRunOnce";
 
-export default function SectionB({ handleChange }) {
+export default function SectionB({ state, handleChange }) {
+  useRunOnce({
+    fn: () => {
+      const inputElements = document.querySelectorAll("input");
+      inputElements.forEach((input) => {
+        if (state[input.name] == undefined) return;
+        input.value = state[input.name];
+      });
+    },
+  });
   return (
     <form>
       <table cellPadding={5} cellSpacing={7} border={1}>
         <th colSpan="7">Details of Insurance History</th>
         <tr>
-          <td>
-              Currently covered by any other Mediclaim/Health Insurance
-          </td>
+          <td>Currently covered by any other Mediclaim/Health Insurance</td>
           <td>
             <label htmlFor="any-other-mediclaim-yes">
-              <input onChange={(e) => handleChange(e, e.currentTarget.name)}
+              <input
+                onChange={(e) => handleChange(e, e.currentTarget.name)}
                 type="radio"
                 value="Yes"
                 name="any-other-mediclaim"
@@ -19,7 +28,8 @@ export default function SectionB({ handleChange }) {
               Yes
             </label>
             <label htmlFor="any-other-mediclaim-no">
-              <input onChange={(e) => handleChange(e, e.currentTarget.name)}
+              <input
+                onChange={(e) => handleChange(e, e.currentTarget.name)}
                 type="radio"
                 value="No"
                 name="any-other-mediclaim"
@@ -34,7 +44,8 @@ export default function SectionB({ handleChange }) {
             </label>
           </td>
           <td>
-            <input onChange={(e) => handleChange(e, e.currentTarget.name)}
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
               type="date"
               id="Date-Of-Commencement"
               name="Date-Of-Commencement"
@@ -46,14 +57,24 @@ export default function SectionB({ handleChange }) {
             <label htmlFor="company-name">If yes, company name</label>
           </td>
           <td>
-            <input onChange={(e) => handleChange(e, e.currentTarget.name)} type="text" id="company-name" name="comapny-name" />
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+              type="text"
+              id="company-name"
+              name="comapny-name"
+            />
           </td>
 
           <td>
             <label htmlFor="policy-number">Policy No.</label>
           </td>
           <td>
-            <input onChange={(e) => handleChange(e, e.currentTarget.name)} type="text" id="policy-number" name="policy-number" />
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+              type="text"
+              id="policy-number"
+              name="policy-number"
+            />
           </td>
         </tr>
         <tr>
@@ -61,7 +82,12 @@ export default function SectionB({ handleChange }) {
             <label htmlFor="sum-insured">Sum Insured (Rs.) </label>
           </td>
           <td>
-            <input onChange={(e) => handleChange(e, e.currentTarget.name)} type="text" id="sum-insured" name="sum-insured" />
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+              type="text"
+              id="sum-insured"
+              name="sum-insured"
+            />
           </td>
           <td>
             Have you been hospitalized in the last four years since inception of
@@ -69,7 +95,8 @@ export default function SectionB({ handleChange }) {
           </td>
           <td>
             <label htmlFor="inception-of-contract-yes">
-              <input onChange={(e) => handleChange(e, e.currentTarget.name)}
+              <input
+                onChange={(e) => handleChange(e, e.currentTarget.name)}
                 type="radio"
                 value="Yes"
                 name="inception-of-contract"
@@ -77,7 +104,8 @@ export default function SectionB({ handleChange }) {
               Yes
             </label>
             <label htmlFor="inception-of-contract-no">
-              <input onChange={(e) => handleChange(e, e.currentTarget.name)}
+              <input
+                onChange={(e) => handleChange(e, e.currentTarget.name)}
                 type="radio"
                 value="No"
                 name="inception-of-contract"
@@ -91,7 +119,12 @@ export default function SectionB({ handleChange }) {
             <label htmlFor="Diagnosis">Diagnosis</label>
           </td>
           <td>
-            <input onChange={(e) => handleChange(e, e.currentTarget.name)} type="text" id="Diagnosis" name="Diagnosis" />
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+              type="text"
+              id="Diagnosis"
+              name="Diagnosis"
+            />
           </td>
 
           <td>
@@ -101,7 +134,8 @@ export default function SectionB({ handleChange }) {
           </td>
           <td>
             <label htmlFor="any-other-mediclaim-2-no">
-              <input onChange={(e) => handleChange(e, e.currentTarget.name)}
+              <input
+                onChange={(e) => handleChange(e, e.currentTarget.name)}
                 type="radio"
                 value="Yes"
                 name="any-other-mediclaim-2"
@@ -109,7 +143,8 @@ export default function SectionB({ handleChange }) {
               Yes
             </label>
             <label htmlFor="any-other-mediclaim-2">
-              <input onChange={(e) => handleChange(e, e.currentTarget.name)}
+              <input
+                onChange={(e) => handleChange(e, e.currentTarget.name)}
                 type="radio"
                 value="No"
                 name="any-other-mediclaim-2"
@@ -123,7 +158,12 @@ export default function SectionB({ handleChange }) {
             <label htmlFor="company-name-2">If yes, company name</label>
           </td>
           <td colSpan={3}>
-            <input onChange={(e) => handleChange(e, e.currentTarget.name)} type="text" id="company-name-2" name="comapny-name-2" />
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+              type="text"
+              id="company-name-2"
+              name="comapny-name-2"
+            />
           </td>
         </tr>
       </table>

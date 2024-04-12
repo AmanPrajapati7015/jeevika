@@ -1,6 +1,17 @@
 import "./formstyles.css";
+import useRunOnce from "../components/useRunOnce";
 
-export default function SectionC({ handleChange }) {
+export default function SectionC({ state, handleChange }) {
+  useRunOnce({
+    fn: () => {
+      const inputElements = document.querySelectorAll("input");
+      inputElements.forEach((input) => {
+        if (state[input.name] == undefined) return;
+        input.value = state[input.name];
+      });
+    },
+  });
+
   return (
     <form>
       <table border="1px solid black">
@@ -68,7 +79,7 @@ export default function SectionC({ handleChange }) {
           </td>
           <td>
             <label htmlFor="dob-of-c">Date of Birth</label>
-          </td> 
+          </td>
           <td>
             <label htmlFor="dob">
               <input

@@ -17,9 +17,9 @@ export default function Form() {
     return JSON.parse(localValue);
   });
 
-  const handleBlur = () => {
-    localStorage.setItem("state", state);
-  };
+  useEffect(() => {
+    localStorage.setItem("state", JSON.stringify(state));
+  });
 
   function handleChange(event, field) {
     setState((prevState) => ({
@@ -98,26 +98,30 @@ export default function Form() {
       </div>
       <div className="form-area">
         {isActive === "A" ? (
-          <SectionA state="state" handleChange={handleChange} />
+          <SectionA state={state} handleChange={handleChange} />
         ) : (
           ""
         )}
         {isActive === "B" ? (
-          <SectionB handleChange={handleChange} handleBlur={handleBlur} />
+          <SectionB state={state} handleChange={handleChange}/>
         ) : (
           ""
         )}
-        {isActive === "C" ? <SectionC handleChange={handleChange} /> : ""}
-        {isActive === "D" ? <SectionD handleChange={handleChange} /> : ""}
-        {isActive === "E" ? <SectionE handleChange={handleChange} /> : ""}
-        {isActive === "F" ? <SectionF handleChange={handleChange} /> : ""}
-        {isActive === "G" ? <SectionG handleChange={handleChange} /> : ""}
+        {isActive === "C" ? (
+          <SectionC state={state} handleChange={handleChange} />
+        ) : (
+          ""
+        )}
+        {isActive === "D" ? <SectionD state={state} handleChange={handleChange} /> : ""}
+        {isActive === "E" ? <SectionE state={state} handleChange={handleChange} /> : ""}
+        {isActive === "F" ? <SectionF state={state} handleChange={handleChange} /> : ""}
+        {isActive === "G" ? <SectionG state={state} handleChange={handleChange} /> : ""}
         {isActive === "Decleration" ? (
-          <Decleration handleChange={handleChange} />
+          <Decleration state={state} handleChange={handleChange} />
         ) : (
           ""
         )}
-        {console.log(state)}
+        {/* {console.log(state)} */}
       </div>
     </div>
   );
