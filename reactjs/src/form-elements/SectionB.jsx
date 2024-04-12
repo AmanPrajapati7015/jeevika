@@ -124,7 +124,7 @@ export default function SectionB() {
           <td>
             <label htmlFor="company-name-2">If yes, company name</label>
           </td>
-          <td>
+          <td colSpan={3}>
             <input type="text" id="company-name-2" name="comapny-name-2" />
           </td>
         </tr>
