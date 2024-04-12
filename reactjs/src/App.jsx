@@ -6,6 +6,7 @@ import SectionC from "./form-elements/SectionC";
 import SectionD from "./form-elements/SectionD";
 import SectionE from "./form-elements/SectionE";
 import SectionG from "./form-elements/SectionG";
+import Decleration from "./form-elements/Declaration";
 // import SectionC from "./form-elements/SectionD";
 
 export default function App() {
