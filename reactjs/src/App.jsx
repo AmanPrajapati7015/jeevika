@@ -1,11 +1,13 @@
 import Navbar from "./components/Navbar";
-import SectionB from "./form-elements/SectionB"
+import SectionA from "./form-elements/SectionA";
+import SectionC from "./form-elements/SectionC";
 
 export default function App(){
   return (
     <>
-      <Navbar />
-      <SectionB/>
+    <Navbar />
+    <SectionA />
+    <SectionC />
     </>
   )
 }
