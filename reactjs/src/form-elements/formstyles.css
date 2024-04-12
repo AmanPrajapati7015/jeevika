@@ -7,7 +7,9 @@
 
 textarea,
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+input[type="date"],
+input[type="time"] {
   width: 80%;
 }
 
@@ -16,7 +18,9 @@ input[type="radio"] {
 }
 
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+input[type="date"],
+input[type="time"] {
   background: none;
   border: 1px black solid;
   border-radius: 3px;
