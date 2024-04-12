@@ -5,9 +5,16 @@
     --bg-purple-2: #FFB5DA;
 }
 
+.wrap{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    /* background-image: url("../assets/bgimage1.jpg"); */
+}
+
 .form-container{
     margin: auto;
-    background-color: var(--bg-purple-2);
+    background-color: #ff7ed443;
     padding: 0 0 50px 0;
     max-width: 1300px;
     margin-top: 7%;

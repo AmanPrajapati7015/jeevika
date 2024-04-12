@@ -61,7 +61,7 @@ td {
 
 form {
   max-width: 1100px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #ff7ed46f;
   /* padding: 100px 40px; */
   padding: 50px 40px;
   border-radius: 15px;
