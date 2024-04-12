@@ -20,7 +20,7 @@ export default function SectionE({ state, handleChange }) {
         <tr>
           <td>
             <label htmlFor="pre-hosp-expense">
-              Pre-Hospitilization Expenses(Rs)
+              Pre-Hospitilization Expenses(₹)
             </label>
           </td>
           <td>
@@ -32,7 +32,7 @@ export default function SectionE({ state, handleChange }) {
             />
           </td>
           <td>
-            <label htmlFor="hosp-expense">Hospitilization Expenses(Rs)</label>
+            <label htmlFor="hosp-expense">Hospitilization Expenses(₹)</label>
           </td>
           <td>
             <input
@@ -167,7 +167,7 @@ export default function SectionE({ state, handleChange }) {
         <tr>
           <td>
             <label htmlFor="post-hosp-expense">
-              . Post-hospitalization expenses(Rs)
+              . Post-hospitalization expenses(₹)
             </label>
           </td>
           <td>
@@ -179,7 +179,7 @@ export default function SectionE({ state, handleChange }) {
             />
           </td>
           <td>
-            <label htmlFor="check-up-cost">Health-Check up cost(Rs)</label>
+            <label htmlFor="check-up-cost">Health-Check up cost(₹)</label>
           </td>
           <td>
             <input
@@ -192,7 +192,7 @@ export default function SectionE({ state, handleChange }) {
         </tr>
         <tr>
           <td>
-            <label htmlFor="Ambulance-charges">Ambulance Charges(Rs)</label>
+            <label htmlFor="Ambulance-charges">Ambulance Charges(₹)</label>
           </td>
           <td>
             <input
@@ -203,7 +203,7 @@ export default function SectionE({ state, handleChange }) {
             />
           </td>
           <td>
-            <label htmlFor="other-expenses">Others(Rs)</label>
+            <label htmlFor="other-expenses">Others(₹)</label>
           </td>
           <td>
             <input
@@ -216,7 +216,7 @@ export default function SectionE({ state, handleChange }) {
         </tr>
         <tr>
           <td colSpan={2}>
-            <label htmlFor="Total-1">Total(Rs)</label>
+            <label htmlFor="Total-1">Total(₹)</label>
           </td>
           <td colSpan={2}>
             <input
@@ -270,7 +270,7 @@ export default function SectionE({ state, handleChange }) {
         </tr>
         <tr>
           <td>
-            <label htmlFor="hosp-daily-cash">Hospital Daily Cash(Rs)</label>
+            <label htmlFor="hosp-daily-cash">Hospital Daily Cash(₹)</label>
           </td>
           <td>
             <input
@@ -281,7 +281,7 @@ export default function SectionE({ state, handleChange }) {
             />
           </td>
           <td>
-            <label htmlFor="Surgical-cash">Surgical Cash(Rs)</label>
+            <label htmlFor="Surgical-cash">Surgical Cash(₹)</label>
           </td>
           <td>
             <input
@@ -295,7 +295,7 @@ export default function SectionE({ state, handleChange }) {
         <tr>
           <td>
             <label htmlFor="pre-post-lump">
-              Pre/Post hospitalization Lump sum benef(Rs)
+              Pre/Post hospitalization Lump sum benef(₹)
             </label>
           </td>
           <td>
@@ -307,7 +307,7 @@ export default function SectionE({ state, handleChange }) {
             />
           </td>
           <td>
-            <label htmlFor="other-expenses-2">Others(Rs)</label>
+            <label htmlFor="other-expenses-2">Others(₹)</label>
           </td>
           <td>
             <input
@@ -322,7 +322,7 @@ export default function SectionE({ state, handleChange }) {
         <tr>
           <td>
             <label htmlFor="Critical-illness">
-              Critical Illness Benefit(Rs)
+              Critical Illness Benefit(₹)
             </label>
           </td>
           <td>
@@ -334,7 +334,7 @@ export default function SectionE({ state, handleChange }) {
             />
           </td>
           <td>
-            <label htmlFor="convalescence">Convalescence(Rs)</label>
+            <label htmlFor="convalescence">Convalescence(₹)</label>
           </td>
           <td>
             <input
@@ -347,7 +347,7 @@ export default function SectionE({ state, handleChange }) {
         </tr>
         <tr>
           <td colSpan={2}>
-            <label htmlFor="Total-2">Total(Rs)</label>
+            <label htmlFor="Total-2">Total(₹)</label>
           </td>
           <td colSpan={2}>
             <input
