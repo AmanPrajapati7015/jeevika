@@ -13,6 +13,13 @@ input[type=text]{
     border-radius: 3px;
 }
 
+input[type=text]:hover,textarea:hover,input[type=number]:hover{
+    border: 2px blue solid;
+    border-radius: 3px;
+    /* transition-duration: 300ms; */
+}
+
+
 textarea{
     background: none;
     border: 1px black solid;
