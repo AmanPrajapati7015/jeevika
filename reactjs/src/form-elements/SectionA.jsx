@@ -14,7 +14,7 @@ export default function SectionA({ state, handleChange }) {
 
   return (
     <form>
-      <table border="2px solid black">
+      <table >
         <th colspan="6">Details of Primary Insured</th>
         <tr>
           <td colspan={2}>

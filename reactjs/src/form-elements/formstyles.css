@@ -4,6 +4,19 @@ textarea, input[type="text"], input[type="number"]{
 
 input[type=radio]{
     margin: 0 4px;
+    
+}
+
+input[type=text]{
+    background: none;
+    border: 1px black solid;
+    border-radius: 3px;
+}
+
+textarea{
+    background: none;
+    border: 1px black solid;
+    border-radius: 3px;
 }
 
 th{
