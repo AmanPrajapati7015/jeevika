@@ -14,10 +14,10 @@ export default function Form() {
   const [state, setState] = useState({});
 
   function handleChange(event, field) {
-      setState(prevState => ({
-          ...prevState,
-          [field]: event.target.value
-      }));
+    setState((prevState) => ({
+      ...prevState,
+      [field]: event.target.value,
+    }));
   }
 
   return (
@@ -90,12 +90,12 @@ export default function Form() {
       </div>
       <div className="form-area">
         {isActive === "A" ? <SectionA handleChange={handleChange} /> : ""}
-        {isActive === "B" ? <SectionB /> : ""}
-        {isActive === "C" ? <SectionC /> : ""}
-        {isActive === "D" ? <SectionD /> : ""}
-        {isActive === "E" ? <SectionE /> : ""}
-        {isActive === "F" ? <SectionF /> : ""}
-        {isActive === "G" ? <SectionG /> : ""}
+        {isActive === "B" ? <SectionB handleChange={handleChange} /> : ""}
+        {isActive === "C" ? <SectionC handleChange={handleChange} /> : ""}
+        {isActive === "D" ? <SectionD handleChange={handleChange} /> : ""}
+        {isActive === "E" ? <SectionE handleChange={handleChange} /> : ""}
+        {isActive === "F" ? <SectionF handleChange={handleChange} /> : ""}
+        {isActive === "G" ? <SectionG handleChange={handleChange} /> : ""}
         {isActive === "Decleration" ? <Decleration /> : ""}
         {console.log(state)}
       </div>

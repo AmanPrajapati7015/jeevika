@@ -1,6 +1,6 @@
 import "./formstyles.css";
 
-export default function SectionE() {
+export default function SectionE({ handleChange }) {
   return (
     <form>
       <table border={1}>
