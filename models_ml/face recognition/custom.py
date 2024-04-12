@@ -62,7 +62,7 @@ if __name__=='__main__':
     images_list=sorted(os.listdir(database_dir))
     embedding_list=[]
     name=[]
-    img_path="WhatsApp Image 2024-04-12 at 4.17.35 PM.jpeg"
+    img_path="WhatsApp Image 2024-04-12 at 19.03.57.jpeg"
     for file in images_list:
         embedding_list.append(inference(os.path.join(database_dir,file)))
         # print(os.path.basename(file).split()[0])
