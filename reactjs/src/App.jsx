@@ -3,6 +3,7 @@ import SectionA from "./form-elements/SectionA";
 import SectionB from "./form-elements/SectionB"
 import SectionC from "./form-elements/SectionC";
 import SectionD from "./form-elements/SectionD";
+import SectionE from "./form-elements/SectionE";
 // import SectionC from "./form-elements/SectionD";
 
 export default function App(){
@@ -13,6 +14,7 @@ export default function App(){
       <SectionB/>
     <SectionC />
     <SectionD />
+    <SectionE />
     </>
   )
 }
