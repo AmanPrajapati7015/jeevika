@@ -1,11 +1,11 @@
-export default function Declaration() {
+export default function Declaration({ handleChange }) {
   return (
     <form>
       <table border={1}>
         <tr>
           <td colSpan={4}>
             <label htmlFor="decleration">
-              <input type="checkbox" name="decleration" id="decleration" />
+              <input type="checkbox" name="decleration" id="decleration" onChange={(e) => handleChange(e, e.currentTarget.name)} />
                 <nbsp /> I hereby declare that the information furnished in the claim
                 form is true & correct to the best of my knowledge and belief.
                 If I have made any false or untrue statement, suppression or
@@ -26,13 +26,13 @@ export default function Declaration() {
             <label htmlFor="Date-of-claim">Date</label>
           </td>
           <td>
-            <input type="date" id="Date-of-claim" name="Date-of-claim" />
+            <input type="date" id="Date-of-claim" name="Date-of-claim" onChange={(e) => handleChange(e, e.currentTarget.name)} />
           </td>
           <td>
             <label htmlFor="Place-of-claim">Place</label>
           </td>
           <td>
-            <input type="text" id="Place-of-claim" name="Place-of-claim" />
+            <input type="text" id="Place-of-claim" name="Place-of-claim" onChange={(e) => handleChange(e, e.currentTarget.name)} />
           </td>
         </tr>
       </table>

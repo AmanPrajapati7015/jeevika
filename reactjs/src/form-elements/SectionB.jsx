@@ -7,15 +7,13 @@ export default function SectionB({ handleChange }) {
         <th colSpan="7">Details of Insurance History</th>
         <tr>
           <td>
-            <label htmlFor="any-other-mediclaim">
               Currently covered by any other Mediclaim/Health Insurance
-            </label>
           </td>
           <td>
             <label htmlFor="any-other-mediclaim-yes">
               <input onChange={(e) => handleChange(e, e.currentTarget.name)}
                 type="radio"
-                id="any-other-mediclaim"
+                value="Yes"
                 name="any-other-mediclaim"
               />
               Yes
@@ -23,7 +21,7 @@ export default function SectionB({ handleChange }) {
             <label htmlFor="any-other-mediclaim-no">
               <input onChange={(e) => handleChange(e, e.currentTarget.name)}
                 type="radio"
-                id="any-other-mediclaim"
+                value="No"
                 name="any-other-mediclaim"
               />
               No
@@ -73,7 +71,7 @@ export default function SectionB({ handleChange }) {
             <label htmlFor="inception-of-contract-yes">
               <input onChange={(e) => handleChange(e, e.currentTarget.name)}
                 type="radio"
-                id="inception-of-contract-yes"
+                value="Yes"
                 name="inception-of-contract"
               />
               Yes
@@ -81,7 +79,7 @@ export default function SectionB({ handleChange }) {
             <label htmlFor="inception-of-contract-no">
               <input onChange={(e) => handleChange(e, e.currentTarget.name)}
                 type="radio"
-                id="inception-of-contract-no"
+                value="No"
                 name="inception-of-contract"
               />
               No
@@ -97,23 +95,23 @@ export default function SectionB({ handleChange }) {
           </td>
 
           <td>
-            <label htmlFor="any-other-mediclaim-2">
+            <label htmlFor="any-other-mediclaim-2-yes">
               Previously covered by any other Mediclaim /Health insurance{" "}
             </label>
           </td>
           <td>
-            <label htmlFor="any-other-mediclaim-2-yes">
+            <label htmlFor="any-other-mediclaim-2-no">
               <input onChange={(e) => handleChange(e, e.currentTarget.name)}
                 type="radio"
-                id="any-other-mediclaim-2-yes"
+                value="Yes"
                 name="any-other-mediclaim-2"
               />
               Yes
             </label>
-            <label htmlFor="any-other-mediclaim-2-no">
+            <label htmlFor="any-other-mediclaim-2">
               <input onChange={(e) => handleChange(e, e.currentTarget.name)}
                 type="radio"
-                id="any-other-mediclaim-2-no"
+                value="No"
                 name="any-other-mediclaim-2"
               />
               No

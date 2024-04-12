@@ -10,8 +10,9 @@ export default function SectionA({ handleChange }) {
             <label htmlFor="policy-no">Policy No.</label>
           </td>
           <td>
-            <input
+            <input 
               onChange={(e) => handleChange(e, e.currentTarget.name)}
+              onBlur={() => handleBlur()}
               type="number"
               name="policy-no"
               id="policy-no"

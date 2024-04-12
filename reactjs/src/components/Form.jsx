@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SectionA from "../form-elements/SectionA";
 import SectionB from "../form-elements/SectionB";
 import SectionC from "../form-elements/SectionC";
@@ -11,7 +11,15 @@ import "./form.css";
 
 export default function Form() {
   const [isActive, setIsActive] = useState("A");
-  const [state, setState] = useState({});
+  const [state, setState] = useState(() => {
+    const localValue = localStorage.getItem("STATE");
+    if (localValue == null) return {};
+    return JSON.parse(localValue);
+  });
+
+  const handleBlur = () => {
+    localStorage.setItem("state", state);
+  };
 
   function handleChange(event, field) {
     setState((prevState) => ({
@@ -89,14 +97,26 @@ export default function Form() {
         </div>
       </div>
       <div className="form-area">
-        {isActive === "A" ? <SectionA handleChange={handleChange} /> : ""}
-        {isActive === "B" ? <SectionB handleChange={handleChange} /> : ""}
+        {isActive === "A" ? (
+          <SectionA state="state" handleChange={handleChange} />
+        ) : (
+          ""
+        )}
+        {isActive === "B" ? (
+          <SectionB handleChange={handleChange} handleBlur={handleBlur} />
+        ) : (
+          ""
+        )}
         {isActive === "C" ? <SectionC handleChange={handleChange} /> : ""}
         {isActive === "D" ? <SectionD handleChange={handleChange} /> : ""}
         {isActive === "E" ? <SectionE handleChange={handleChange} /> : ""}
         {isActive === "F" ? <SectionF handleChange={handleChange} /> : ""}
         {isActive === "G" ? <SectionG handleChange={handleChange} /> : ""}
-        {isActive === "Decleration" ? <Decleration /> : ""}
+        {isActive === "Decleration" ? (
+          <Decleration handleChange={handleChange} />
+        ) : (
+          ""
+        )}
         {console.log(state)}
       </div>
     </div>
