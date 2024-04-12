@@ -34,6 +34,8 @@
     border-top-right-radius: 15px;
     height: 100%;
     aspect-ratio: 2.5;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .form-section:hover{
@@ -42,7 +44,6 @@
     flex-grow: 0.1;
     height: 70px;
     transform: translateY(-15px);
-
 }
 
 ul {
