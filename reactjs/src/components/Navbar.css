@@ -11,14 +11,14 @@
     color:red;
     /* background-color: aqua; */
     border: 1px black solid;
-    height: 8rem;
+    height: 130px;
     margin: 0px;
-    padding: 0.2rem 6.5rem;
+    padding: 10px 100px;
 }
 
 .nav-button-container{
     display: flex;
-    gap: 1.2rem;
+    gap: 20px;
     align-items: wrap;
 }
 /* 
@@ -35,7 +35,7 @@
     height: 75%;
     color: black;
     font-family: Helvetica, sans-serif;
-    font-size: 3.5rem;
+    font-size: 60px;
 }
 
 .logo-container #logo-name-ji{
@@ -44,11 +44,11 @@
 
 .nav-button-container button{
     border: red 1px solid;
-    border-radius: 0.6rem;
-    height: 2.5rem;
-    aspect-ratio: 3.4;
+    border-radius: 10px;
+    height: 42px;
+    aspect-ratio: 3.2;
     background: none;
     color: red;
-    padding: 0.1rem 0.2rem;
-    font-size: 1.2rem;
+    padding: 6px 8px;
+    font-size: 20px;
 }
