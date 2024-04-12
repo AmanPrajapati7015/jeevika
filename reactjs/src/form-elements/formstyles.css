@@ -1,3 +1,22 @@
 textarea, input[type="text"], input[type="number"]{
     width: 100%;
 }
+
+th{
+    width: 80%;
+}
+
+td{
+    text-align: center;
+}
+
+form{
+    width: 55%;
+    background-color: rgba(233, 21, 169, 0.4);
+    padding: 20px;
+    border-radius: 15px;
+    /* align-items: center; */
+    justify-content: center;
+    display: flex;
+    margin: 30px auto;
+}

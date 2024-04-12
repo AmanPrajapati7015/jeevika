@@ -1,7 +1,10 @@
+import "./formstyles.css";
+
 export default function SectoinC() {
   return (
     <form>
       <table border="1px solid black">
+        <th colspan="7">Details of Insurance Person Hospitalized</th>
         <tr>
           <td>
             <label htmlFor="name">Name</label>
@@ -19,8 +22,6 @@ export default function SectoinC() {
               Male
               <input type="radio" name="gender" />
             </label>
-          </td>
-          <td>
             <label htmlFor="female">
               Female
               <input type="radio" name="gender" />
@@ -29,16 +30,19 @@ export default function SectoinC() {
         </tr>
         <tr>
           <td>
-            <label htmlFor="age">
-              Age Years
-              <input type="text" id="age-years" />
-            </label>
+            <label htmlFor="age">Age Years</label>
+            
           </td>
+          <td>
+              <input type="text" id="age-years" />
+            </td>
           <td>
             <label htmlFor="months">
               Months
-              <input type="text" id="age-months" />
             </label>
+          </td>
+          <td>
+          <input type="text" id="age-months" />
           </td>
           <td>
             <label htmlFor="dob">
