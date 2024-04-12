@@ -1,13 +1,13 @@
 .form-container{
     margin: auto;
     background-color: blanchedalmond;
-    /* height: 600px; */
-    /* width: 1200px; */
     padding: 0 0 50px 0;
     max-width: 1600px;
+    margin-top: 5%;
 }
 
 .form-container .form-section-container{
+    transform: translateY(-55px);
     display: inline;
     height: 55px;
     width: 100%;

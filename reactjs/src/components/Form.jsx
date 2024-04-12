@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SectionA from "../form-elements/SectionA";
 import SectionB from "../form-elements/SectionB";
 import SectionC from "../form-elements/SectionC";
@@ -11,6 +11,22 @@ import "./form.css";
 
 export default function Form() {
   const [isActive, setIsActive] = useState("A");
+  const [state, setState] = useState(() => {
+    const localValue = localStorage.getItem("STATE");
+    if (localValue == null) return {};
+    return JSON.parse(localValue);
+  });
+
+  useEffect(() => {
+    localStorage.setItem("state", JSON.stringify(state));
+  });
+
+  function handleChange(event, field) {
+    setState((prevState) => ({
+      ...prevState,
+      [field]: event.target.value,
+    }));
+  }
 
   return (
     <div className="form-container">
@@ -81,14 +97,31 @@ export default function Form() {
         </div>
       </div>
       <div className="form-area">
-        {isActive === "A" ? <SectionA /> : ""}
-        {isActive === "B" ? <SectionB /> : ""}
-        {isActive === "C" ? <SectionC /> : ""}
-        {isActive === "D" ? <SectionD /> : ""}
-        {isActive === "E" ? <SectionE /> : ""}
-        {isActive === "F" ? <SectionF /> : ""}
-        {isActive === "G" ? <SectionG /> : ""}
-        {isActive === "Decleration" ? <Decleration /> : ""}
+        {isActive === "A" ? (
+          <SectionA state={state} handleChange={handleChange} />
+        ) : (
+          ""
+        )}
+        {isActive === "B" ? (
+          <SectionB state={state} handleChange={handleChange}/>
+        ) : (
+          ""
+        )}
+        {isActive === "C" ? (
+          <SectionC state={state} handleChange={handleChange} />
+        ) : (
+          ""
+        )}
+        {isActive === "D" ? <SectionD state={state} handleChange={handleChange} /> : ""}
+        {isActive === "E" ? <SectionE state={state} handleChange={handleChange} /> : ""}
+        {isActive === "F" ? <SectionF state={state} handleChange={handleChange} /> : ""}
+        {isActive === "G" ? <SectionG state={state} handleChange={handleChange} /> : ""}
+        {isActive === "Decleration" ? (
+          <Decleration state={state} handleChange={handleChange} />
+        ) : (
+          ""
+        )}
+        {/* {console.log(state)} */}
       </div>
     </div>
   );

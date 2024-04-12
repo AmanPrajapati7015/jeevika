@@ -1,6 +1,17 @@
-import './formstyles.css' 
+import "./formstyles.css";
+import useRunOnce from "../components/useRunOnce";
 
-export default function SectionG() {
+export default function SectionG({ state, handleChange }) {
+  useRunOnce({
+    fn: () => {
+      const inputElements = document.querySelectorAll("input");
+      inputElements.forEach((input) => {
+        if (state[input.name] == undefined) return;
+        input.value = state[input.name];
+      });
+    },
+  });
+
   return (
     <form>
       <table border={1}>
@@ -10,13 +21,23 @@ export default function SectionG() {
             <label htmlFor="Adhaar-no">Adhaar No.</label>
           </td>
           <td>
-            <input type="text" id="Adhaar-no" name="Adhaar-no" />
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+              type="text"
+              id="Adhaar-no"
+              name="Adhaar-no"
+            />
           </td>
           <td>
             <label htmlFor="Account-Number">Account Number</label>
           </td>
           <td>
-            <input type="text" id="Account-Number" name="Account-Number" />
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+              type="text"
+              id="Account-Number"
+              name="Account-Number"
+            />
           </td>
         </tr>
         <tr>
@@ -24,7 +45,12 @@ export default function SectionG() {
             <label htmlFor="Bank-name-branch">Bank Name and Branch</label>
           </td>
           <td colSpan={3}>
-            <input type="text" id="Bank-name-branch" name="Bank-name-branch" />
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+              type="text"
+              id="Bank-name-branch"
+              name="Bank-name-branch"
+            />
           </td>
         </tr>
         <tr>
@@ -32,13 +58,23 @@ export default function SectionG() {
             <label htmlFor="cheque-dd">Cheque/DD Payable Details</label>
           </td>
           <td>
-            <input type="text" id="cheque-dd" name="cheque-dd" />
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+              type="text"
+              id="cheque-dd"
+              name="cheque-dd"
+            />
           </td>
           <td>
             <label htmlFor="ifsc">IFSC Code</label>
           </td>
           <td>
-            <input type="text" id="ifsc" name="ifsc" />
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+              type="text"
+              id="ifsc"
+              name="ifsc"
+            />
           </td>
         </tr>
       </table>

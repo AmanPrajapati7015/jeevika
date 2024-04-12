@@ -20,9 +20,9 @@ td{
 }
 
 form{
-    width: 55%;
+    max-width: 1200px;
     background-color: rgba(233, 21, 169, 0.4);
-    padding: 20px;
+    padding: 100px 40px;
     border-radius: 15px;
     justify-content: center;
     display: flex;
