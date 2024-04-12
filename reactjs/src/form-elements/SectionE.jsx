@@ -6,14 +6,83 @@ export default function SectionE() {
             <table border={1}>
                 <tr>
                     <td colSpan={4}> Details of the Treatment expenses claimed</td>
-                    <td colSpan={9}>Documents Submitted</td>
+                    <td>Documents Submitted</td>
                 </tr>
                 <tr>
                     <td><label htmlFor="pre-hosp-expense">Pre-Hospitilization Expenses(Rs)</label></td>
                     <td><input type="text" id="pre-hosp-expense" name="pre-hosp-expense"/></td>
                     <td><label htmlFor="hosp-expense">Hospitilization Expenses(Rs)</label></td>
                     <td><input type="text" id="hosp-expense" name="hosp-expense"/></td>
-                    
+                    <td rowSpan={10}>
+                        <ul>    
+                            <li><label>
+                                <input type="checkbox" />Claim form duly signed
+                            </label>
+                            </li>
+                            <li>
+                            <label>
+                                <input type="checkbox" />Copy of the claim intimation, if any
+                                </label>
+                            </li>
+                            <li>
+                            <label>
+                                <input type="checkbox" />Hospital Main Bill
+                                </label>
+                            </li>
+                            <li>
+                            <label>
+                                <input type="checkbox" />Hospital Break-up Bill
+                            </label>
+                            </li>
+                            <li>
+                            <label>
+                                <input type="checkbox" />Hospital Bill Payment Receipt
+                                </label>
+                            </li>
+                            <li>
+                            <label>
+                                <input type="checkbox" />Hospital Discharge Summary
+                                </label>
+                            </li>
+                            <li>
+                            <label>
+                                <input type="checkbox" />Pharmacy Bill
+
+                                </label>
+                            </li>
+                            <li>
+                            <label>
+                                <input type="checkbox" />Operation Theater Notes
+                                </label>
+                            </li>
+                            <li>
+                            <label>
+                                <input type="checkbox" />ECG
+                                </label>
+                            </li>
+                            <li>
+                            <label>
+                                <input type="checkbox" />Doctor’s request for investigation
+                                </label>
+                            </li>
+                            <li>
+                            <label>
+                                <input type="checkbox" />Investigation Reports (Including CT/ MRI / USG / HPE)
+                                </label>
+                            </li>
+                            <li>
+                            <label>
+                                <input type="checkbox" />Doctor’s Prescriptions
+                                </label>
+                            </li>
+                            <li>
+                            <label>
+                                <input type="checkbox" />Others
+                                </label>
+                            </li>
+                            
+                        </ul>
+                    </td>
                 </tr>
                 <tr>
                 <td><label htmlFor="post-hosp-expense">. Post-hospitalization expenses(Rs)</label></td>
