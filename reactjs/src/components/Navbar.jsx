@@ -14,17 +14,17 @@ export default function Navbar() {
       <div className="nav-button-container">
         <span className="support">
           <a href="" className="supportbtn-link">
-            <button id="track-status">Track Status</button>
+            <button id="track-status" a={Button}>Track Status</button>
           </a>
         </span>
         <span className="signin">
           <a href="" className="signinbtn-link">
-            <button id="sign-in">Sign In</button>
+            <button id="sign-in" a={Button}>Sign In</button>
           </a>
         </span>
         <span className="support">
           <a href="https://vihaan.ieeedtu.in/" className="supportbtn-link">
-            <button id="support">Support</button>
+            <button id="support" a={Button}>Support</button>
           </a>
         </span>
       </div>
