@@ -13,7 +13,7 @@ export default function SectionB({ handleChange }) {
           </td>
           <td>
             <label htmlFor="any-other-mediclaim-yes">
-              <input
+              <input onChange={(e) => handleChange(e, e.currentTarget.name)}
                 type="radio"
                 id="any-other-mediclaim"
                 name="any-other-mediclaim"
@@ -21,7 +21,7 @@ export default function SectionB({ handleChange }) {
               Yes
             </label>
             <label htmlFor="any-other-mediclaim-no">
-              <input
+              <input onChange={(e) => handleChange(e, e.currentTarget.name)}
                 type="radio"
                 id="any-other-mediclaim"
                 name="any-other-mediclaim"
@@ -36,7 +36,7 @@ export default function SectionB({ handleChange }) {
             </label>
           </td>
           <td>
-            <input
+            <input onChange={(e) => handleChange(e, e.currentTarget.name)}
               type="date"
               id="Date-Of-Commencement"
               name="Date-Of-Commencement"
@@ -48,14 +48,14 @@ export default function SectionB({ handleChange }) {
             <label htmlFor="company-name">If yes, company name</label>
           </td>
           <td>
-            <input type="text" id="company-name" name="comapny-name" />
+            <input onChange={(e) => handleChange(e, e.currentTarget.name)} type="text" id="company-name" name="comapny-name" />
           </td>
 
           <td>
             <label htmlFor="policy-number">Policy No.</label>
           </td>
           <td>
-            <input type="text" id="policy-number" name="policy-number" />
+            <input onChange={(e) => handleChange(e, e.currentTarget.name)} type="text" id="policy-number" name="policy-number" />
           </td>
         </tr>
         <tr>
@@ -63,7 +63,7 @@ export default function SectionB({ handleChange }) {
             <label htmlFor="sum-insured">Sum Insured (Rs.) </label>
           </td>
           <td>
-            <input type="text" id="sum-insured" name="sum-insured" />
+            <input onChange={(e) => handleChange(e, e.currentTarget.name)} type="text" id="sum-insured" name="sum-insured" />
           </td>
           <td>
             Have you been hospitalized in the last four years since inception of
@@ -71,7 +71,7 @@ export default function SectionB({ handleChange }) {
           </td>
           <td>
             <label htmlFor="inception-of-contract-yes">
-              <input
+              <input onChange={(e) => handleChange(e, e.currentTarget.name)}
                 type="radio"
                 id="inception-of-contract-yes"
                 name="inception-of-contract"
@@ -79,7 +79,7 @@ export default function SectionB({ handleChange }) {
               Yes
             </label>
             <label htmlFor="inception-of-contract-no">
-              <input
+              <input onChange={(e) => handleChange(e, e.currentTarget.name)}
                 type="radio"
                 id="inception-of-contract-no"
                 name="inception-of-contract"
@@ -93,7 +93,7 @@ export default function SectionB({ handleChange }) {
             <label htmlFor="Diagnosis">Diagnosis</label>
           </td>
           <td>
-            <input type="text" id="Diagnosis" name="Diagnosis" />
+            <input onChange={(e) => handleChange(e, e.currentTarget.name)} type="text" id="Diagnosis" name="Diagnosis" />
           </td>
 
           <td>
@@ -103,7 +103,7 @@ export default function SectionB({ handleChange }) {
           </td>
           <td>
             <label htmlFor="any-other-mediclaim-2-yes">
-              <input
+              <input onChange={(e) => handleChange(e, e.currentTarget.name)}
                 type="radio"
                 id="any-other-mediclaim-2-yes"
                 name="any-other-mediclaim-2"
@@ -111,7 +111,7 @@ export default function SectionB({ handleChange }) {
               Yes
             </label>
             <label htmlFor="any-other-mediclaim-2-no">
-              <input
+              <input onChange={(e) => handleChange(e, e.currentTarget.name)}
                 type="radio"
                 id="any-other-mediclaim-2-no"
                 name="any-other-mediclaim-2"
@@ -125,7 +125,7 @@ export default function SectionB({ handleChange }) {
             <label htmlFor="company-name-2">If yes, company name</label>
           </td>
           <td colSpan={3}>
-            <input type="text" id="company-name-2" name="comapny-name-2" />
+            <input onChange={(e) => handleChange(e, e.currentTarget.name)} type="text" id="company-name-2" name="comapny-name-2" />
           </td>
         </tr>
       </table>
