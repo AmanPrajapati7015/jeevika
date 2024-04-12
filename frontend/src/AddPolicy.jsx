@@ -2,6 +2,8 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { TextField, Button } from '@mui/material/';
 
+import axios from 'axios'
+
 function AddPolicy() {
     const navigate = useNavigate();
 
@@ -14,15 +16,30 @@ function AddPolicy() {
         }));
     }
 
+    function setPhoto(e){
+        setState(prevState=>({
+            ...prevState,
+            "photo":e.target.files[0]
+        }))
+    }
+
+    function setSignature(e){
+        setState(prevState=>({
+            ...prevState,
+            "signature":e.target.files[0]
+        }))
+    }
+
     function submit() {
         const formData = new FormData();
-        
+        console.log(state);
+
         Object.keys(state).forEach((key) => {
             formData.append(key, state[key]);
         });
     
-        formData.append("photo", state.photo);
-        formData.append("signature", state.signature);
+        // formData.append("photo", state.photo);
+        // formData.append("signature", state.signature);
     
         axios.post('/api/add-policy', formData, {
             headers: {
@@ -55,8 +72,8 @@ function AddPolicy() {
                             <TextField onChange={(e) => handleChange(e, "NomineeName")} id="outlined-basic" label="Nominee Name" size='small' required variant="outlined" />
                             <TextField onChange={(e) => handleChange(e, "Relation")} id="outlined-basic" label='Relation with Nominee' size="small" required  variant="outlined" />
                             <TextField onChange={(e) => handleChange(e, "Aadhar")} id="outlined-basic" label='Aadhar no' type='number' size="small" required  variant="outlined" />
-                            <TextField onChange={(e) => handleChange(e, "Photo")} InputLabelProps={{ shrink: true }} type='file' id="outlined-basic" label="Photo URL" size='small' variant="outlined" />
-                            <TextField onChange={(e) => handleChange(e, "Signature")} InputLabelProps={{ shrink: true }} type='file' id="outlined-basic" label="Signature URL" size='small' variant="outlined" />
+                            <TextField onChange={setPhoto} InputLabelProps={{ shrink: true }} type='file' id="outlined-basic" label="Photo" size='small' variant="outlined" />
+                            <TextField onChange={setSignature} InputLabelProps={{ shrink: true }} type='file' id="outlined-basic" label="Signature URL" size='small' variant="outlined" />
                         </div>
                     </div>
                     <br />
