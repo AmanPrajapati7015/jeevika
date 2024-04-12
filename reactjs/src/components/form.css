@@ -1,8 +1,10 @@
 .form-container{
     margin: auto;
     background-color: blanchedalmond;
-    height: 600px;
-    width: 1200px;
+    /* height: 600px; */
+    /* width: 1200px; */
+    padding: 0 0 50px 0;
+    max-width: 1600px;
 }
 
 .form-container .form-section-container{
@@ -19,4 +21,12 @@
     background-color: red;
     height: 100%;
     aspect-ratio: 2.5;
+}
+
+ul {
+    list-style-type: none;
+}
+
+td, th{
+    padding: 4px;
 }

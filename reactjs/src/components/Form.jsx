@@ -3,6 +3,9 @@ import SectionA from "../form-elements/SectionA";
 import SectionB from "../form-elements/SectionB";
 import SectionC from "../form-elements/SectionC";
 import SectionD from "../form-elements/SectionD";
+import SectionE from "../form-elements/SectionE";
+import SectionF from "../form-elements/SectionF";
+import SectionG from "../form-elements/SectionG";
 import "./form.css";
 
 export default function Form() {
@@ -43,15 +46,39 @@ export default function Form() {
         >
           Section D
         </div>
-        <div className="form-section">Section E</div>
-        <div className="form-section">Section F</div>
-        <div className="form-section">Section G</div>
+        <div
+          className="form-section"
+          onClick={(e) => {
+            setIsActive("E");
+          }}
+        >
+          Section E
+        </div>
+        <div
+          className="form-section"
+          onClick={(e) => {
+            setIsActive("F");
+          }}
+        >
+          Section F
+        </div>
+        <div
+          className="form-section"
+          onClick={(e) => {
+            setIsActive("G");
+          }}
+        >
+          Section G
+        </div>
       </div>
       <div className="form-area">
         {isActive === "A" ? <SectionA /> : ""}
         {isActive === "B" ? <SectionB /> : ""}
         {isActive === "C" ? <SectionC /> : ""}
         {isActive === "D" ? <SectionD /> : ""}
+        {isActive === "E" ? <SectionE /> : ""}
+        {isActive === "F" ? <SectionF /> : ""}
+        {isActive === "G" ? <SectionG /> : ""}
       </div>
     </div>
   );
