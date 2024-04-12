@@ -1,14 +1,16 @@
+import './formstyles.css'
+
 export default function SectionA() {
   return (
     <form>
-      <table border="1px solid black">
-        <th colspan="6">Details of Primary Insured</th>
+      <table border="1px solid black" style={{width: "80%"}}>
+        <th colspan="7">Details of Primary Insured</th>
         <tr>
           <td colSpan="2">
             <label htmlFor="policy-no">Policy No.</label>
           </td>
           <td>
-            <input type="number" id="policy-no" />
+            <input type="number" id="policy-no"/>
           </td>
           <td colspan="2">
             <label htmlFor="tpa-id-no">TPA ID No.</label>
