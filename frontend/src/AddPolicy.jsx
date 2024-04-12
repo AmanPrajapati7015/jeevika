@@ -38,9 +38,6 @@ function AddPolicy() {
             formData.append(key, state[key]);
         });
     
-        // formData.append("photo", state.photo);
-        // formData.append("signature", state.signature);
-    
         axios.post('/api/add-policy', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
