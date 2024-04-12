@@ -6,6 +6,7 @@ import SectionD from "../form-elements/SectionD";
 import SectionE from "../form-elements/SectionE";
 import SectionF from "../form-elements/SectionF";
 import SectionG from "../form-elements/SectionG";
+import Decleration from "../form-elements/Declaration";
 import "./form.css";
 
 export default function Form() {
@@ -70,6 +71,14 @@ export default function Form() {
         >
           Section G
         </div>
+        <div
+          className="form-section"
+          onClick={(e) => {
+            setIsActive("Decleration");
+          }}
+        >
+          Decleration
+        </div>
       </div>
       <div className="form-area">
         {isActive === "A" ? <SectionA /> : ""}
@@ -79,6 +88,7 @@ export default function Form() {
         {isActive === "E" ? <SectionE /> : ""}
         {isActive === "F" ? <SectionF /> : ""}
         {isActive === "G" ? <SectionG /> : ""}
+        {isActive === "Decleration" ? <Decleration /> : ""}
       </div>
     </div>
   );

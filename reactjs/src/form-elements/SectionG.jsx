@@ -1,4 +1,4 @@
-import "./formstyles.css";
+import './formstyles.css' 
 
 export default function SectionG() {
   return (
