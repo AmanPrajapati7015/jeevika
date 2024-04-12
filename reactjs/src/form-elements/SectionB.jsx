@@ -79,7 +79,7 @@ export default function SectionB({ state, handleChange }) {
         </tr>
         <tr>
           <td>
-            <label htmlFor="sum-insured">Sum Insured (Rs.) </label>
+            <label htmlFor="sum-insured">Sum Insured (₹) </label>
           </td>
           <td>
             <input
