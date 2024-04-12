@@ -1,6 +1,6 @@
 import "./formstyles.css";
 
-export default function SectoinC() {
+export default function SectionC() {
   return (
     <form>
       <table border="1px solid black">
@@ -10,7 +10,7 @@ export default function SectoinC() {
             <label htmlFor="name">Name</label>
           </td>
           <td>
-            <input type="text" id="name" />
+            <input type="text" name="name" id="name" />
           </td>
         </tr>
         <tr>
@@ -19,34 +19,31 @@ export default function SectoinC() {
           </td>
           <td>
             <label htmlFor="male">
+              <input type="radio" id="male" name="gender" />
               Male
-              <input type="radio" name="gender" />
             </label>
             <label htmlFor="female">
+              <input type="radio" id="female" name="gender" />
               Female
-              <input type="radio" name="gender" />
             </label>
           </td>
         </tr>
         <tr>
           <td>
             <label htmlFor="age">Age Years</label>
-            
           </td>
           <td>
-              <input type="text" id="age-years" />
-            </td>
-          <td>
-            <label htmlFor="months">
-              Months
-            </label>
+            <input type="text" name="age-years" id="age-years" />
           </td>
           <td>
-          <input type="text" id="age-months" />
+            <label htmlFor="months">Months</label>
+          </td>
+          <td>
+            <input type="text" name="age-months" id="age-months" />
           </td>
           <td>
             <label htmlFor="dob">
-              <input type="date" id="dob" />
+              <input type="date" name="dob" id="dob" />
             </label>
           </td>
         </tr>
@@ -54,24 +51,24 @@ export default function SectoinC() {
           <td>Relationship to Primary Insured:</td>
           <td>
             <label htmlFor="self">
-              Self
               <input type="radio" name="rel-to-primary" id="self" />
+              Self
             </label>
             <label htmlFor="spouse">
-              Spouse
               <input type="radio" name="rel-to-primary" id="spouse" />
+              Spouse
             </label>
             <label htmlFor="child">
-              Child
               <input type="radio" name="rel-to-primary" id="child" />
+              Child
             </label>
             <label htmlFor="father">
-              Father
               <input type="radio" name="rel-to-primary" id="father" />
+              Father
             </label>
             <label htmlFor="mother">
-              Mother
               <input type="radio" name="rel-to-primary" id="mother" />
+              Mother
             </label>
           </td>
         </tr>
@@ -79,24 +76,24 @@ export default function SectoinC() {
           <td>Occupation:</td>
           <td>
             <label htmlFor="service">
-              Service
               <input type="radio" name="occupation" id="self" />
+              Service
             </label>
             <label htmlFor="self-employed">
-              Self Employed
               <input type="radio" name="occupation" id="self-employed" />
+              Self Employed
             </label>
             <label htmlFor="home-maker">
-              Home Maker
               <input type="radio" name="occupation" id="home-maker" />
+              Home Maker
             </label>
             <label htmlFor="student">
-              Student
               <input type="radio" name="occupation" id="student" />
+              Student
             </label>
             <label htmlFor="other">
-              Other
               <input type="radio" name="occupation" id="other" />
+              Other
             </label>
           </td>
         </tr>
@@ -113,19 +110,19 @@ export default function SectoinC() {
             <label htmlFor="city">City</label>
           </td>
           <td>
-            <input type="text" />
+            <input type="text" name="city" />
           </td>
           <td>
             <label htmlFor="state">State</label>
           </td>
           <td>
-            <input type="text" id="state" />
+            <input type="text" name="state" id="state" />
           </td>
           <td>
             <label htmlFor="pincode">Pincode</label>
           </td>
           <td>
-            <input type="number" id="pincode" />
+            <input type="number" name="pincode" id="pincode" />
           </td>
         </tr>
         <tr>
@@ -133,13 +130,13 @@ export default function SectoinC() {
             <label htmlFor="phone-no">Phone No.</label>
           </td>
           <td>
-            <input type="text" id="phone-no" />
+            <input type="text" name="phone-no" id="phone-no" />
           </td>
           <td>
             <label htmlFor="email-id">Email</label>
           </td>
           <td>
-            <input type="text" id="email-id" />
+            <input type="text" name="email-id" id="email-id" />
           </td>
         </tr>
       </table>

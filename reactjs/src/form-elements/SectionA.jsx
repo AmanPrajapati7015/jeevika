@@ -3,70 +3,70 @@ import "./formstyles.css";
 export default function SectionA() {
   return (
     <form>
-      <table border="1px solid black">
-        <th colspan="7">Details of Primary Insured</th>
+      <table border="2px solid black">
+        <th colspan="6">Details of Primary Insured</th>
         <tr>
-          <td colSpan="2">
+          <td colspan={2}>
             <label htmlFor="policy-no">Policy No.</label>
           </td>
           <td>
-            <input type="number" id="policy-no" />
+            <input type="number" name="policy-no" id="policy-no" />
           </td>
-          <td colspan="2">
+          <td colspan={2}>
             <label htmlFor="tpa-id-no">TPA ID No.</label>
           </td>
           <td>
-            <input type="text" id="tpa-id-no" />
+            <input type="text" name="tpa-id-no" id="tpa-id-no" />
           </td>
         </tr>
         <tr>
-          <td colspan="2">
+          <td colspan="3">
             <label htmlFor="name">Name</label>
           </td>
-          <td>
-            <input type="text" id="name" />
+          <td colspan={3}>
+            <input type="text" name="name" id="name" />
           </td>
         </tr>
         <tr>
-          <td colspan="2">
+          <td colspan="3">
             <label htmlFor="address">Address</label>
           </td>
-          <td>
-            <textarea id="address" />
+          <td colspan={3}>
+            <textarea id="address" name="address" />
           </td>
         </tr>
         <tr>
-          <td colspan="1">
+          <td>
             <label htmlFor="city">City</label>
           </td>
           <td>
-            <input type="text" />
+            <input type="text" name="city" id="city" />
           </td>
           <td>
             <label htmlFor="state">State</label>
           </td>
           <td>
-            <input type="text" id="state" />
+            <input type="text" name="state" id="state" />
           </td>
           <td>
             <label htmlFor="pincode">Pincode</label>
           </td>
           <td>
-            <input type="number" id="pincode" />
+            <input type="number" name="pincode" id="pincode" />
           </td>
         </tr>
         <tr>
-          <td>
+          <td colspan={2}>
             <label htmlFor="phone-no">Phone No.</label>
           </td>
           <td>
-            <input type="text" id="phone-no" />
+            <input type="text" name="phone-no" id="phone-no" />
           </td>
-          <td>
+          <td colspan={2}>
             <label htmlFor="email-id">Email</label>
           </td>
           <td>
-            <input type="text" id="email-id" />
+            <input type="text" name="email-id" id="email-id" />
           </td>
         </tr>
       </table>

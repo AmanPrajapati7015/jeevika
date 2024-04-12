@@ -1,13 +1,22 @@
 textarea, input[type="text"], input[type="number"]{
-    width: 100%;
+    width: 80%;
+}
+
+input[type=radio]{
+    margin: 0 4px;
 }
 
 th{
     width: 80%;
+    height: 40px;
+    vertical-align: middle;
+    margin: auto;
+    font-size: 18px;
 }
 
 td{
     text-align: center;
+    height: 30px;
 }
 
 form{
@@ -15,7 +24,6 @@ form{
     background-color: rgba(233, 21, 169, 0.4);
     padding: 20px;
     border-radius: 15px;
-    /* align-items: center; */
     justify-content: center;
     display: flex;
     margin: 30px auto;
