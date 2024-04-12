@@ -1,0 +1,74 @@
+
+:root{
+    --main-purple: #6420AA;
+    --comp-purple: #FF3EA5;
+    --bg-purple-1: #FF7ED4;
+    --bg-purple-2: #FFB5DA;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px black solid;
+    height: 110px;
+    margin: 0px;
+    padding: 10px 100px;
+    /* background-color: var(--main-purple); */
+    background: linear-gradient(to left, var(--main-purple), var(--bg-purple-1));
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-button-container{
+    display: flex;
+    gap: 20px;
+    align-items: wrap;
+}
+
+/* 
+.logo-img{
+    height: 40px;
+    width: 100px;
+    padding-top: 5px;
+    padding-left: 5px;
+    border: 2px black solid;
+} */
+
+.nav-container .logo-container{
+    /* background-color: yellow; */
+    background: url('../assets/logo.svg');
+    position: relative;
+    height: 75%;
+    width: 70px;
+    /* color: black; */
+    /* font-family: Helvetica, sans-serif; */
+    /* font-size: 60px; */
+}
+
+.jeevika-logo{
+    height: 80%;
+    scale: 2;
+    padding-top: 10px;
+}
+
+.logo-container #logo-name-ji{
+    font-weight: bold;
+}
+
+.nav-button-container button{
+    /* border: #0d1d45 1px solid; */
+    border: none;
+    /* border-radius: 10px; */
+    height: 44px;
+    aspect-ratio: 3.2;
+    background: none;
+    color: whitesmoke;
+    padding: 6px 8px;
+    font-weight: bold;
+    font-size: 20px;
+}
