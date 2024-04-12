@@ -12,15 +12,24 @@
     height: 55px;
     width: 100%;
     display: flex;
-    gap: 2px;
+    /* gap: 2px; */
 }
 
 .form-section{
     display: inline;
-    border: 1px solid black; 
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* border: 1px solid black;  */
     background-color: red;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     height: 100%;
     aspect-ratio: 2.5;
+}
+.form-section:hover{
+    background-color: blue;
+    /* transition-delay: 400ms; */
+    transition-duration: 400ms;
 }
 
 ul {
