@@ -34,9 +34,9 @@ export default function SectionA() {
           </td>
         </tr>
         <tr>
-          <th colspan="1">
+          <td colspan="1">
             <label htmlFor="city">City</label>
-          </th>
+          </td>
           <td>
             <input type="text" />
           </td>

@@ -1,7 +1,7 @@
 export default function SectoinC() {
   return (
     <form>
-      <table>
+      <table border="1px solid black">
         <tr>
           <td>
             <label htmlFor="name">Name</label>
@@ -75,7 +75,7 @@ export default function SectoinC() {
           <td>Occupation:</td>
           <td>
             <label htmlFor="service">
-            Service
+              Service
               <input type="radio" name="occupation" id="self" />
             </label>
             <label htmlFor="self-employed">
@@ -97,17 +97,17 @@ export default function SectoinC() {
           </td>
         </tr>
         <tr>
-          <th colspan="2">
+          <td colspan="1">
             <label htmlFor="address">Address</label>
-          </th>
+          </td>
           <td>
             <textarea id="address" />
           </td>
         </tr>
         <tr>
-          <th colspan="2">
+          <td colspan="1">
             <label htmlFor="city">City</label>
-          </th>
+          </td>
           <td>
             <input type="text" />
           </td>
