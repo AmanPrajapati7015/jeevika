@@ -12,18 +12,7 @@ export default function App() {
   return (
     <>
     <Navbar />
-      <SectionA />
-      <SectionB/>
-    <SectionC />
-    <SectionD />
-      <SectionE />
-      <SectionG />
-      <Navbar />
-      <Form />
-      {/* <SectionA /> */}
-      {/* <SectionB /> */}
-      {/* <SectionC /> */}
-      {/* <SectionD /> */}
+    <Form />
     </>
   );
 }
