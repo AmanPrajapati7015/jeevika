@@ -1,6 +1,6 @@
 function ClaimForm(){
     return (
-        <h1>Claim Form page</h1>
+        <div className="heading">Claim Form page</div>
     )
 }
 export default ClaimForm

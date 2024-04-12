@@ -4,12 +4,12 @@ function Dashboard(){
     const navigate = useNavigate();
     return (
         <>
-            <h1>Dashboard</h1>
-            <button onClick={()=>navigate("/add-new-policy")}>Add new Policy</button>
+            <div className='heading'>Dashboard</div>
+            <button onClick={()=>navigate("/add-new-policy")}  variant="contained">Add new Policy</button>
             <div>
-                <h2>
+                <div className='heading'>
                     Incoming claims
-                </h2>
+                </div>
             </div>
         </>
     )

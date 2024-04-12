@@ -19,12 +19,15 @@
     align-items: wrap;
 }
 
+.track-status .sign-in .support{
+    font-family: Helvetica;
+}
 
 .nav-button-container button{
-    border: rgb(255, 22, 177) 1px solid;
-    border-radius: 10px;
+    border: #0d1d45 1px solid;
+    border-radius: 4px;
     background: none;
-    color: rgb(255, 22, 177);
+    color: #0d1d45;
     font-size: 0.9rem;
-    padding: 6px 8px;
+    padding: 0.5rem 0.7rem;
 }
