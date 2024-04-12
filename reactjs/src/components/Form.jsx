@@ -11,6 +11,14 @@ import "./form.css";
 
 export default function Form() {
   const [isActive, setIsActive] = useState("A");
+  const [state, setState] = useState({});
+
+  function handleChange(event, field) {
+      setState(prevState => ({
+          ...prevState,
+          [field]: event.target.value
+      }));
+  }
 
   return (
     <div className="form-container">
@@ -81,7 +89,7 @@ export default function Form() {
         </div>
       </div>
       <div className="form-area">
-        {isActive === "A" ? <SectionA /> : ""}
+        {isActive === "A" ? <SectionA handleChange={handleChange} /> : ""}
         {isActive === "B" ? <SectionB /> : ""}
         {isActive === "C" ? <SectionC /> : ""}
         {isActive === "D" ? <SectionD /> : ""}
@@ -89,6 +97,7 @@ export default function Form() {
         {isActive === "F" ? <SectionF /> : ""}
         {isActive === "G" ? <SectionG /> : ""}
         {isActive === "Decleration" ? <Decleration /> : ""}
+        {console.log(state)}
       </div>
     </div>
   );

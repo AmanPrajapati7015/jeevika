@@ -1,6 +1,6 @@
 import "./formstyles.css";
 
-export default function SectionA() {
+export default function SectionA({ handleChange }) {
   return (
     <form>
       <table border="2px solid black">
@@ -10,13 +10,23 @@ export default function SectionA() {
             <label htmlFor="policy-no">Policy No.</label>
           </td>
           <td>
-            <input type="number" name="policy-no" id="policy-no" />
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+              type="number"
+              name="policy-no"
+              id="policy-no"
+            />
           </td>
           <td colspan={2}>
             <label htmlFor="tpa-id-no">TPA ID No.</label>
           </td>
           <td>
-            <input type="text" name="tpa-id-no" id="tpa-id-no" />
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+              type="text"
+              name="tpa-id-no"
+              id="tpa-id-no"
+            />
           </td>
         </tr>
         <tr>
@@ -24,7 +34,12 @@ export default function SectionA() {
             <label htmlFor="name">Name</label>
           </td>
           <td colspan={3}>
-            <input type="text" name="name" id="name" />
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+              type="text"
+              name="name"
+              id="name"
+            />
           </td>
         </tr>
         <tr>
@@ -32,7 +47,11 @@ export default function SectionA() {
             <label htmlFor="address">Address</label>
           </td>
           <td colspan={3}>
-            <textarea id="address" name="address" />
+            <textarea
+              id="address"
+              name="address"
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+            />
           </td>
         </tr>
         <tr>
@@ -40,19 +59,34 @@ export default function SectionA() {
             <label htmlFor="city">City</label>
           </td>
           <td>
-            <input type="text" name="city" id="city" />
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+              type="text"
+              name="city"
+              id="city"
+            />
           </td>
           <td>
             <label htmlFor="state">State</label>
           </td>
           <td>
-            <input type="text" name="state" id="state" />
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+              type="text"
+              name="state"
+              id="state"
+            />
           </td>
           <td>
             <label htmlFor="pincode">Pincode</label>
           </td>
           <td>
-            <input type="number" name="pincode" id="pincode" />
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+              type="number"
+              name="pincode"
+              id="pincode"
+            />
           </td>
         </tr>
         <tr>
@@ -60,13 +94,23 @@ export default function SectionA() {
             <label htmlFor="phone-no">Phone No.</label>
           </td>
           <td>
-            <input type="text" name="phone-no" id="phone-no" />
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+              type="text"
+              name="phone-no"
+              id="phone-no"
+            />
           </td>
           <td colspan={2}>
             <label htmlFor="email-id">Email</label>
           </td>
           <td>
-            <input type="text" name="email-id" id="email-id" />
+            <input
+              onChange={(e) => handleChange(e, e.currentTarget.name)}
+              type="text"
+              name="email-id"
+              id="email-id"
+            />
           </td>
         </tr>
       </table>

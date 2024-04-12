@@ -1,6 +1,6 @@
 import "./formstyles.css";
 
-export default function SectionB() {
+export default function SectionB({ handleChange }) {
   return (
     <form>
       <table cellPadding={5} cellSpacing={7} border={1}>
