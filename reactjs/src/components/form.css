@@ -1,0 +1,22 @@
+.form-container{
+    margin: auto;
+    background-color: blanchedalmond;
+    height: 600px;
+    width: 1200px;
+}
+
+.form-container .form-section-container{
+    display: inline;
+    height: 55px;
+    width: 100%;
+    display: flex;
+    gap: 2px;
+}
+
+.form-section{
+    display: inline;
+    border: 1px solid black; 
+    background-color: red;
+    height: 100%;
+    aspect-ratio: 2.5;
+}
