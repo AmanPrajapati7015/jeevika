@@ -1,4 +1,4 @@
-import './formstyles.css'
+import "./formstyles.css";
 import useRunOnce from "../components/useRunOnce";
 
 export default function Declaration({ state, handleChange }) {
@@ -12,8 +12,13 @@ export default function Declaration({ state, handleChange }) {
     },
   });
 
+  function handleSubmit(e){
+    e.preventDefault();
+    console.log(state);
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <table border={1}>
         <tr>
           <td colSpan={4}>
@@ -61,6 +66,11 @@ export default function Declaration({ state, handleChange }) {
               name="Place-of-claim"
               onChange={(e) => handleChange(e, e.currentTarget.name)}
             />
+          </td>
+        </tr>
+        <tr>
+          <td colSpan={4}>
+            <button id="submit">Submit</button>
           </td>
         </tr>
       </table>
