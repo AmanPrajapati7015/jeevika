@@ -1,48 +1,59 @@
-textarea, input[type="text"], input[type="number"]{
-    width: 80%;
+:root{
+    --main-purple: #6420AA;
+    --comp-purple: #FF3EA5;
+    --bg-purple-1: #FF7ED4;
+    --bg-purple-2: #FFB5DA;
 }
 
-input[type=radio]{
-    margin: 0 4px;
-    
+textarea,
+input[type="text"],
+input[type="number"] {
+  width: 80%;
 }
 
-input[type=text]{
-    background: none;
-    border: 1px black solid;
-    border-radius: 3px;
+input[type="radio"] {
+  margin: 0 4px;
 }
 
-textarea{
-    background: none;
-    border: 1px black solid;
-    border-radius: 3px;
+input[type="text"],
+input[type="number"] {
+  background: none;
+  border: 1px black solid;
+  border-radius: 3px;
 }
 
-table, th, td{
-    border: 2px solid black;
-    border-collapse: collapse;
+textarea {
+  background: none;
+  border: 1px black solid;
+  border-radius: 3px;
 }
 
-th{
-    width: 80%;
-    height: 40px;
-    vertical-align: middle;
-    margin: auto;
-    font-size: 18px;
+table,
+th,
+td {
+  border: 2px solid black;
+  border-collapse: collapse;
 }
 
-td{
-    text-align: center;
-    height: 30px;
+th {
+  width: 80%;
+  height: 40px;
+  vertical-align: middle;
+  margin: auto;
+  font-size: 18px;
 }
 
-form{
-    max-width: 1200px;
-    background-color: rgba(233, 21, 169, 0.4);
-    padding: 100px 40px;
-    border-radius: 15px;
-    justify-content: center;
-    display: flex;
-    margin: 30px auto;
+td {
+  text-align: center;
+  height: 30px;
+}
+
+form {
+  max-width: 1200px;
+  /* background-color: rgba(233, 21, 169, 0.4); */
+  /* padding: 100px 40px; */
+  border-radius: 15px;
+  justify-content: center;
+  display: flex;
+  margin: 30px auto;
 }
