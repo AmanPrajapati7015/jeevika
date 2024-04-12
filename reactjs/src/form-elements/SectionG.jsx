@@ -23,5 +23,4 @@ export default function SectionG() {
             </table>
         </form>
     )
->>>>>>> 3cd0ea85fc4c95ab9b10a065b2cd06162ab48317
 }
