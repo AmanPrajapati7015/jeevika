@@ -1,16 +1,13 @@
-
-import "./Navbar.css";
-import logo from "../assets/ghar.png";
-import Button from 'react-bootstrap/Button'
+import {useNavigate} from 'react-router-dom'
+import "./navbar.css";
 
 export default function Navbar() {
+  const navigate = useNavigate();
+
   return (
     <div className="nav-container">
       <div className="logo-container">
-        <label htmlFor="logo-name-ji logo-name-vika">
-        <font id="logo-name-ji">जी</font><font id="logo-name-vika">vika</font>
-        </label>
-        {/* <img className="logo-img" src="" /> */}
+        <img onClick={()=>navigate("/")} src="logo.png" alt="" height={"60px"}/>
       </div>
       <div className="nav-button-container">
         <span className="support">
@@ -19,9 +16,7 @@ export default function Navbar() {
           </a>
         </span>
         <span className="signin">
-          <a href="" className="signinbtn-link">
-            <button id="sign-in">Sign In</button>
-          </a>
+            <button onClick={()=>navigate('/admin-login')} id="sign-in">Sign In</button>
         </span>
         <span className="support">
           <a href="https://vihaan.ieeedtu.in/" className="supportbtn-link">

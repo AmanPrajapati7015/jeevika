@@ -8,7 +8,7 @@ function Dashboard(){
             <button onClick={()=>navigate("/add-new-policy")}>Add new Policy</button>
             <div>
                 <h2>
-                    Incomming claims
+                    Incoming claims
                 </h2>
             </div>
         </>

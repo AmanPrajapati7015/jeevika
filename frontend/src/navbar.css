@@ -1,0 +1,30 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px black solid;
+    margin: 0px;
+    padding: 0 100px;
+}
+
+.nav-button-container{
+    display: flex;
+    gap: 20px;
+    align-items: wrap;
+}
+
+
+.nav-button-container button{
+    border: rgb(255, 22, 177) 1px solid;
+    border-radius: 10px;
+    background: none;
+    color: rgb(255, 22, 177);
+    font-size: 0.9rem;
+    padding: 6px 8px;
+}

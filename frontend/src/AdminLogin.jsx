@@ -18,12 +18,18 @@ function AdminLogin(){
     return(
         
         <>
-        <h1>Comapany Admin Login</h1>
+        <div className="container">
+
+            <h1>Company Admin Login</h1>
             <div className="crudential" variant="outlined" >
-                <TextField onChange={(e)=>setAdminID(e.target.value)} id="outlined-basic" label="Admin-id" variant="outlined" />
-                <TextField onChange={(e)=>setPassword(e.target.value)} id="outlined-basic" type="password" label="Password" variant="outlined" />
-                <Button onClick={login} variant="contained">Submit</Button>
+
+                <div className="crudential" variant="outlined" >
+                    <TextField onChange={(e)=>setAdminID(e.target.value)} id="outlined-basic" label="Admin-id" variant="outlined" />
+                    <TextField onChange={(e)=>setPassword(e.target.value)} id="outlined-basic" type="password" label="Password" variant="outlined" />
+                    <Button onClick={login} variant="contained">Submit</Button>
             </div>
+            </div>
+        </div>
         </>
     )
 }

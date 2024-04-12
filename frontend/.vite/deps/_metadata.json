@@ -1,8 +1,40 @@
 {
-  "hash": "4d614bbc",
+  "hash": "c64b0508",
   "configHash": "ee056132",
-  "lockfileHash": "e3b0c442",
-  "browserHash": "73e36ce6",
-  "optimized": {},
-  "chunks": {}
+  "lockfileHash": "e88713dd",
+  "browserHash": "9956b36d",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "a77a5b20",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "11703300",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "50b354aa",
+      "needsInterop": false
+    },
+    "@mui/material/": {
+      "src": "../../node_modules/@mui/material/index.js",
+      "file": "@mui_material_.js",
+      "fileHash": "7ad09f9a",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-KJUJBIHA": {
+      "file": "chunk-KJUJBIHA.js"
+    },
+    "chunk-W4VDMLRG": {
+      "file": "chunk-W4VDMLRG.js"
+    }
+  }
 }

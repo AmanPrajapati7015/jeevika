@@ -7,10 +7,10 @@ import RegisterCompany from './RegisterCompany'
 import AdminLogin from './AdminLogin'
 import Dashboard from './Dashboard'
 import AddPolicy from './AddPolicy'
+// import React  from 'react'
  
 
 function App() {
-
 
   return (
     <>

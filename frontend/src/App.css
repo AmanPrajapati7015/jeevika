@@ -11,3 +11,23 @@ div.crudential{
     width: 400px;
     margin: auto;
 }
+div.background-wrap{
+    width: 100vw;
+    height: 100vh;
+    padding: 50px 0;
+}
+
+div.container{
+    margin: auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.811);
+    width: min-content;
+    border: 1px solid black;
+    border-radius: 20px;
+    
+}
+
+div.container h1{
+    text-align: center;
+    margin: 0 0  80px 0;
+}
