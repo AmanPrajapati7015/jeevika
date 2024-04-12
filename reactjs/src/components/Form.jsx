@@ -81,14 +81,6 @@ export default function Form() {
         <div
           className="form-section"
           onClick={(e) => {
-            setIsActive("G");
-          }}
-        >
-          Section G
-        </div>
-        <div
-          className="form-section"
-          onClick={(e) => {
             setIsActive("Decleration");
           }}
         >
@@ -114,7 +106,6 @@ export default function Form() {
         {isActive === "D" ? <SectionD state={state} handleChange={handleChange} /> : ""}
         {isActive === "E" ? <SectionE state={state} handleChange={handleChange} /> : ""}
         {isActive === "F" ? <SectionF state={state} handleChange={handleChange} /> : ""}
-        {isActive === "G" ? <SectionG state={state} handleChange={handleChange} /> : ""}
         {isActive === "Decleration" ? (
           <Decleration state={state} handleChange={handleChange} />
         ) : (

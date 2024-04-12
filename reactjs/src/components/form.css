@@ -9,12 +9,14 @@
     margin: auto;
     background-color: var(--bg-purple-2);
     padding: 0 0 50px 0;
-    max-width: 1200px;
+    max-width: 1300px;
     margin-top: 7%;
+    border: 5px solid #FF3EA5;
+    border-radius: 25px;
 }
 
 .form-container .form-section-container{
-    transform: translateY(-55px);
+    transform: translateY(-55px) translateX(3%);
     display: flex;
     height: 55px;
     width: 100%;
