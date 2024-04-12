@@ -1,16 +1,17 @@
 import "./Navbar.css";
-import logo from "../assets/ghar.png";
+import logo from "../assets/logo.svg";
 import Button from 'react-bootstrap/Button'
 
 export default function Navbar() {
   return (
     <div className="nav-container">
-      <div className="logo-container">
-        <label htmlFor="logo-name-ji logo-name-vika">
-        <font id="logo-name-ji">जी</font><font id="logo-name-vika">vika</font>
-        </label>
+      {/* <div className="logo-container"> */}
+              {/* <label htmlFor="logo-name-ji logo-name-vika"> */}
+                  <img src={logo} alt="logo" className="jeevika-logo"/>
+        {/* <font id="logo-name-ji">जी</font><font id="logo-name-vika">vika</font> */}
+        {/* </label> */}
         {/* <img className="logo-img" src="" /> */}
-      </div>
+      {/* </div> */}
       <div className="nav-button-container">
         <span className="support">
           <a href="" className="supportbtn-link">

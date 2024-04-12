@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color:red;
+    /* color:blue; */
     /* background-color: aqua; */
     border: 1px black solid;
     height: 110px;
@@ -31,11 +31,21 @@
 } */
 
 .nav-container .logo-container{
-    background-color: red;
+    /* background-color: yellow; */
+    background: url('../assets/logo.svg');
+    position: relative;
     height: 75%;
-    color: black;
-    font-family: Helvetica, sans-serif;
-    font-size: 60px;
+    width: 70px;
+    /* color: black; */
+    /* font-family: Helvetica, sans-serif; */
+    /* font-size: 60px; */
+}
+
+.jeevika-logo{
+    height: 80%;
+    scale: 2;
+    padding-top: 10px;
+    /* background-color: red; */
 }
 
 .logo-container #logo-name-ji{
@@ -43,12 +53,12 @@
 }
 
 .nav-button-container button{
-    border: red 1px solid;
-    border-radius: 10px;
+    border: #0d1d45 1px solid;
+    border-radius: 4px;
     height: 42px;
     aspect-ratio: 3.2;
     background: none;
-    color: red;
+    color: #0d1d45;
     padding: 6px 8px;
     font-size: 20px;
 }
