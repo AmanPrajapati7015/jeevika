@@ -5,7 +5,7 @@ import SectionB from "./form-elements/SectionB";
 import SectionC from "./form-elements/SectionC";
 import SectionD from "./form-elements/SectionD";
 import SectionE from "./form-elements/SectionE";
-import SectionG from "./form-elements/SectionG";
+import SectionG from "./form-elements/SectionF";
 import Decleration from "./form-elements/Declaration";
 // import SectionC from "./form-elements/SectionD";
 
