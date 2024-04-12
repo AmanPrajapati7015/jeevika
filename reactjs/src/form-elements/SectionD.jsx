@@ -4,6 +4,7 @@ export default function SectionD() {
     return (
         <form>
             <table border={1}>
+                <th colSpan={8}>Details of Hospitalization</th>
                 <tr>
                     <td colSpan={4}><label htmlFor="hospitilization-details"> Name of Hospital where Admited</label></td>
                     <td colSpan={4}><input type="text" id="hospitilization-details" name="hospitilization-details"/>
