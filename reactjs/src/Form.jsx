@@ -9,10 +9,9 @@ import SectionG from "./form-elements/SectionF";
 import Decleration from "./form-elements/Declaration";
 // import SectionC from "./form-elements/SectionD";
 
-export default function App() {
+export default function Form() {
   return (
     <>
-    <Navbar />
     <Form />
     </>
   );
