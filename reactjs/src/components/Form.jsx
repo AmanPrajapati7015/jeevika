@@ -31,7 +31,7 @@ export default function Form() {
 
   return (
     <>
-      <img className="wrap" src={bgimage} />
+      {/* <img className="wrap" src={bgimage} /> */}
       <div className="form-container">
         <div className="form-section-container">
           <div
