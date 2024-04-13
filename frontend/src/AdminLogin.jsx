@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react';
 import { TextField, Button } from '@mui/material/';
+import axios from 'axios';
 
 
 function AdminLogin() {
@@ -11,8 +12,17 @@ function AdminLogin() {
     const navigate = useNavigate();
 
     function login() {
-        console.log({ adminID, password });
-        navigate('/dashboard');
+        let data = { adminID, password };
+        console.log(data);
+        axios.post('/api/admin-signin', { adminID, password },)
+            .then(response => {
+                console.log('Response:', response.data);
+                localStorage.setItem("token", response.data.token);
+                navigate("/dashboard");
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
     }
 
     return (

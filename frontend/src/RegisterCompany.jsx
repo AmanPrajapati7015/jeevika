@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { TextField, Button } from '@mui/material/';
 import { useNavigate } from 'react-router-dom'
+import axios from "axios";
 
 function RegisterComapany() {
     const [cName, setCName] = useState("");
@@ -11,8 +12,16 @@ function RegisterComapany() {
     const navigate = useNavigate();
 
     function sendDetails() {
-        console.log({ cName, adminID, password, gst });
-        navigate("/admin-login")
+        const details = { cName, adminID, password, gst }
+
+        axios.post('/api/company-register', details)
+            .then(response => {
+                console.log('Response:', response.data);
+                navigate("/admin-login")
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
     }
 
     return (
