@@ -12,6 +12,7 @@ export default function Navbar({ user, setUser }) {
     if (localStorage.getItem("token")) {
       axios.get('/api/me', { headers: { Authorization: "Bearer " + localStorage.getItem("token") } })
         .then((res) => {
+          console.log(res.data);
           setUser(res.data);
         })
         .catch(() => {
@@ -32,11 +33,11 @@ export default function Navbar({ user, setUser }) {
           </a>
         </span>
           <span className="signin">
-        {!user ? <>
-            <button onClick={() => navigate('/admin-login')} id="sign-in">Sign In</button>
-        </> : <>
-          <button>{user.adminID}</button>
-        </>}
+            {!user.cName ? <>
+                <button onClick={() => navigate('/admin-login')} id="sign-in">Sign In</button>
+            </> : <>
+              <button>{user.cName}</button>
+            </>}
           </span>
         <span className="support">
           <a href="https://vihaan.ieeedtu.in/" className="supportbtn-link">

@@ -14,7 +14,7 @@ function AdminLogin() {
     function login() {
         let data = { adminID, password };
         console.log(data);
-        axios.get('/api/admin-signin', data)
+        axios.post('/api/admin-signin', { adminID, password },)
             .then(response => {
                 console.log('Response:', response.data);
                 localStorage.setItem("token", response.data.token);

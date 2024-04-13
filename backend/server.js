@@ -41,6 +41,7 @@ const userAuthentication = (req, res, next) => {
             return res.status(400).send("Authentication of user failed")
         }
     })
+    // next();
 };
 
 app.get("/api/me",userAuthentication, (req, res)=>{
@@ -70,10 +71,10 @@ app.post('/api/company-register', async (req,  res)=>{
     res.send('Form submitted successfully!');
 })
 
-app.get("/api/admin-signin", async(req, res)=>{
-    let data = req.body;
-    let user = await CompanyDetails.findOne(data);
-    const obj = {cName:user.cName}
+app.post("/api/admin-signin", async(req, res)=>{
+    let { adminID, password } = req.body;
+    let user = await CompanyDetails.findOne({ adminID, password });
+    const obj = {adminID, password , cName:user.cName}
     if (user) {
         console.log(obj);
         let token = jwt.sign(obj, secretUser);
