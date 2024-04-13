@@ -22,20 +22,18 @@ input[type="number"],
 input[type="date"],
 input[type="time"] {
   background: none;
-  border: 1px black solid;
+  /* border: 1px black solid; */
   border-radius: 3px;
 }
 
 input[type="text"]:hover,
 input[type="number"]:hover,
 input[type="date"]:hover,
-input[type="time"]:hover{
-    border: 2px #FF3EA5 solid;
-}
+
 
 textarea {
   background: none;
-  border: 1px black solid;
+  /* border: 1px black solid; */
   border-radius: 3px;
 }
 
