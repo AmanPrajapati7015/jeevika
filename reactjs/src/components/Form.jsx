@@ -6,7 +6,8 @@ import SectionD from "../form-elements/SectionD";
 import SectionE from "../form-elements/SectionE";
 import SectionF from "../form-elements/SectionF";
 import Decleration from "../form-elements/Declaration";
-import {bgimage} from '../assets/bgimage1.jpg'
+import bgimage from "../assets/bgimage1.jpg";
+import bgimage2 from "../assets/bgimage2.jpg"
 import "./form.css";
 
 export default function Form() {
@@ -30,7 +31,7 @@ export default function Form() {
 
   return (
     <>
-    <img className="wrap" src={bgimage} />
+      <img className="wrap" src={bgimage} />
       <div className="form-container">
         <div className="form-section-container">
           <div
