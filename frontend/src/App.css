@@ -11,20 +11,38 @@ div.crudential{
     width: 300px;
     margin: auto;
 }
+div.crudential #submit{
+    align-self: center;
+}
+
 div.background-wrap{
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
     padding: 50px 0;
+    
+}
+.heading{
+    font-size:xx-large;
+    margin:2rem;
 }
 
 div.container{
-    margin: auto;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.811);
-    width: min-content;
+    box-sizing: border-box;
+    margin: 1rem auto;
+    padding: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    width:max-content;
     border: 1px solid black;
     border-radius: 20px;
+
     
+}
+#super{
+    display: flex;
+    /* height:90vh; */
+    align-items: center;
+    justify-content: center;
+
 }
 
 div.container h1{

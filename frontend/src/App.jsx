@@ -3,11 +3,11 @@ import { useState } from 'react'
 import './App.css'
 import HomePage from './HomePage'
 import Navbar from './Navbar'
-import ClaimForm from './ClaimForm'
 import RegisterCompany from './RegisterCompany'
 import AdminLogin from './AdminLogin'
 import Dashboard from './Dashboard'
 import AddPolicy from './AddPolicy'
+import ClaimForm from './ClaimForm'
 // import React  from 'react'
  
 
