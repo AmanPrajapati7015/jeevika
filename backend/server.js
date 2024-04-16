@@ -23,7 +23,6 @@ app.use(express.urlencoded({ extended: true }));
 
 
 const userAuthentication = (req, res, next) => {
-    console.log(req.headers.authorization.split(" ")[1]);
     let authToken = req.headers.authorization.split(" ")[1];
     jwt.verify(authToken, secretUser, async (err, user) => {
         if (err) {
@@ -31,7 +30,7 @@ const userAuthentication = (req, res, next) => {
             return res.status(403).send("Error in verifing authtoken")
         }
         else {
-            console.log(user);
+            // console.log(user);
             const found = await CompanyDetails.findOne({cName: user.cName});
             req.user = found //used while adding to watchlist
             if (found) {
@@ -41,7 +40,6 @@ const userAuthentication = (req, res, next) => {
             return res.status(400).send("Authentication of user failed")
         }
     })
-    // next();
 };
 
 app.get("/api/me",userAuthentication, (req, res)=>{
@@ -50,17 +48,19 @@ app.get("/api/me",userAuthentication, (req, res)=>{
 
 
 // Route to handle form submission
-app.post('/api/add-policy', upload.fields([{ name: 'photo' }, { name: 'signature' }]), async (req, res) => {
+app.post('/api/add-policy', userAuthentication, upload.fields([{ name: 'photo' }, { name: 'signature' }]), async (req, res) => {
     console.log(req.body);
-    const { PolicyNo, Name, Address, Amount, DOB, NomineeName, Relation, Aadhar } = req.body;
+    const { PolicyNo, Name, Address, Amount, DOB, NomineeName, Relation, Aadhar, cName } = req.body;
     const photoPath =  imagesURL+req.files['photo'][0].path;
     const signaturePath = imagesURL+req.files['signature'][0].path;
 
-    const policyDetails = { PolicyNo, Name, Address, Amount, DOB, NomineeName, Relation, Aadhar, photoPath, signaturePath }
+    const policyDetails = { PolicyNo, Name, Address, Amount, DOB, NomineeName, Relation, Aadhar, photoPath, signaturePath, cName }
     console.log(policyDetails);
-
     let policy =  new PolicyModel(policyDetails);
     await policy.save();
+    console.log(policy);
+
+    await CompanyDetails.findOneAndUpdate({cName:req.user.cName},  {$push: { policies: policy._id }} );
 
     res.send('Form submitted successfully!');
 });
@@ -78,7 +78,7 @@ app.post("/api/admin-signin", async(req, res)=>{
     if (user) {
         console.log(obj);
         let token = jwt.sign(obj, secretUser);
-        res.json({ message: 'Logged in successfully', token });
+        res.json({...obj, message: 'Logged in successfully', token });
     } else {
         res.status(403).json({ message: 'User authentication failed' });
     }

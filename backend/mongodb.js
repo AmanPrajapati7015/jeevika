@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const policySchema = new mongoose.Schema({
+    cName:String,
     PolicyNo: Number,
     Name: String,
     Address: String,
@@ -29,7 +30,8 @@ const detailsSchema = new mongoose.Schema({
     gst: {
         type: String,
         required: true
-    }
+    },
+    policies:[{type: mongoose.Schema.Types.ObjectId, ref: 'policy'}]
 });
 
 const CompanyDetails = mongoose.model('Details', detailsSchema);

@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import { TextField, Button } from '@mui/material/';
+import { useEffect, useState } from 'react';
+import { TextField, Button, useEventCallback } from '@mui/material/';
 
 import axios from 'axios'
 
-function AddPolicy() {
+function AddPolicy({user}) {
     const navigate = useNavigate();
 
     const [state, setState] = useState({});
@@ -15,6 +15,7 @@ function AddPolicy() {
             [field]: event.target.value
         }));
     }
+    
 
     function setPhoto(e){
         setState(prevState=>({
@@ -32,15 +33,17 @@ function AddPolicy() {
 
     function submit() {
         const formData = new FormData();
-        console.log(state);
+        console.log(user);
 
         Object.keys(state).forEach((key) => {
             formData.append(key, state[key]);
         });
+        formData.append("cName", user.cName);
     
         axios.post('/api/add-policy', formData, {
             headers: {
-                'Content-Type': 'multipart/form-data'
+                'Content-Type': 'multipart/form-data',
+                Authorization: "Bearer " + localStorage.getItem("token") 
             }
         })
         .then(response => {

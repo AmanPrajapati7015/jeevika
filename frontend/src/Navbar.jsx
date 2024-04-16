@@ -33,10 +33,10 @@ export default function Navbar({ user, setUser }) {
           </a>
         </span>
           <span className="signin">
-            {!user.cName ? <>
-                <button onClick={() => navigate('/admin-login')} id="sign-in">Sign In</button>
-            </> : <>
+            {user ? <>
               <button>{user.cName}</button>
+            </> : <>
+              <button onClick={() => navigate('/admin-login')} id="sign-in">Sign In</button>
             </>}
           </span>
         <span className="support">

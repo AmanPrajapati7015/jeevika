@@ -13,7 +13,7 @@ import AddPolicy from './AddPolicy'
 
 function App() {
 
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(null);
 
   return (
     <>
@@ -23,9 +23,9 @@ function App() {
           <Route path='/' element={<HomePage />}/>
           <Route path='/claim-form' element={<ClaimForm/>}/>
           <Route path='/company-register' element={<RegisterCompany/>}/>
-          <Route path='/admin-login' element={<AdminLogin/>}/>
-          <Route path="/dashboard" element={<Dashboard user={user}/>} />
-          <Route path="/add-new-policy" element={<AddPolicy/>} />
+          <Route path='/admin-login' element={<AdminLogin setUser={setUser}/>}/>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/add-new-policy" element={<AddPolicy user={user}/>} />
        </Routes>
       </BrowserRouter>
     </>

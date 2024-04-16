@@ -4,7 +4,7 @@ import { TextField, Button } from '@mui/material/';
 import axios from 'axios';
 
 
-function AdminLogin() {
+function AdminLogin({setUser}) {
 
     const [adminID, setAdminID] = useState("");
     const [password, setPassword] = useState("");
@@ -17,6 +17,7 @@ function AdminLogin() {
         axios.post('/api/admin-signin', { adminID, password },)
             .then(response => {
                 console.log('Response:', response.data);
+                setUser(response.data);
                 localStorage.setItem("token", response.data.token);
                 navigate("/dashboard");
             })
